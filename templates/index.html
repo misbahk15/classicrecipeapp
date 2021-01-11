@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Welcome to Recipe App {% endblock %}</h1>
+    {% for recipe in recipes %}
+        <a href="{{ url_for('recipe', recipe_id=recipe['recipe_id']) }}">
+            <h2>{{ recipe['title'] }}</h2>
+        </a>
+        <span class="badge badge-primary">{{ recipe['created_date'] }}</span>
+        <a href="{{ url_for('edit', recipe_id=recipe['recipe_id']) }}">
+            <span class="badge badge-warning">Edit</span>
+        </a>
+        
+    {% endfor %}
+{% endblock %}
