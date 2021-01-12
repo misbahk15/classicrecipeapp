@@ -13,7 +13,6 @@ Backend embedded database used - SQLite
 -   Python Version 3.9 
 -   Python Packages required for installation are mentioned in requirements.txt file of project.
 -   IDE - Pycharm Community Edition 2020.3.1
--   Api client - Insomnia
 
 \#\# Database Prerequisites
 ------------------------ 
@@ -31,7 +30,6 @@ Built using Flask render_template() and Jinja template engine
 \#\# Installation
 ------------------------------------
 - Install Python Version 3.9 [python.org](https://www.python.org/)
-- Visit the page [Insomnia](https://insomnia.rest/download/) and Double click the installer file to install Insomnia.
 - Install IDE of choice
 
 \#\# How to run
