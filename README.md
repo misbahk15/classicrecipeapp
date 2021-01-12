@@ -38,9 +38,9 @@ Built using Flask render_template() and Jinja template engine
 ------------------------------------
 - Perform all installations mentioned above and clone this repository
 - Install all libraries as mentioned in requirements.txt
-- Run following to setup the Database  : python db/init_db.py
+- Run following to setup the Database  : python db/init_sqlite.py
 - Set environment variables via terminal:
-    - export FLASK_APP=appsql
+    - set FLASK_APP=appsql
 - Start up the flask application on your local machine: flask run
 - The application will be up and running on http://127.0.0.1:5000/
 - Application supports following APIs:
