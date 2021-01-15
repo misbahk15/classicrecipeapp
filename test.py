@@ -11,6 +11,35 @@ class testclass(unittest.TestCase):
         assert recipe.title == 'TestDish'
         assert recipe.is_vegetarian == 'Yes'
         assert recipe.suitable_for == 3
+    #Given a Recipe model
+    #When a recipe is updated
+    #Then check the title,is_vegeterian,Ingredients,Cooking Instructions are defined correctly
+        recipe= Recipe("Chicken chilly",'No','A great recipe for all those non-veg lovers')
+        assert recipe.title == 'Dish'
+        assert recipe.is_vegetarian == 'No'
+        assert recipe.Ingredients == 'Chicken'
+    #Given a Recipe model
+    #When a recipe title is filled
+    #Then check the  is vegeterian,Ingredients and Cooking Instructions are defined correctly
+        recipe = Recipe('No','chicken,capsicum,garlic,chillies,tomato','A great recipe for all those non-veg lovers.')
+        assert recipe.is_vegetarian == 'No'
+        assert recipe.Ingredients ==  'chicken,capsicum,garlic,chillies,tomato'
+        assert recipe.cooking_instructions == 'A great recipe for all those non-veg lovers.'
+    #Given a Recipe model
+    #When a recipe title,suitable_for,is_vegeterian
+    #Then check the Ingredients,Cooking instructions are deifned correctly
+        recipe = Recipe('chicken,capsicum,garlic,chillies,tomato','A great recipe for all those non-veg lovers.')
+        assert recipe.cooking_instructions == 'A great recipe for all those non-veg lovers.'
+        assert recipe.Ingredients ==  'chicken,capsicum,garlic,chillies,tomato'
+
+    #Given a Recipe model
+    #When a recipe title,suitable_for
+    #Then check the is_vegeterian,Ingredients,Cooking instructions are deifned correctly
+        recipe = Recipe('No', 'chicken,capsicum,garlic,chillies,tomato','A great recipe for all those non-veg lovers.')
+        assert recipe.is_vegetarian == 'No'
+        assert recipe.Ingredients ==  'chicken,capsicum,garlic,chillies,tomato'
+        assert recipe.cooking_instructions == 'A great recipe for all those non-veg lovers.'
+
     def test_dish_name(self):
         self.assertTrue("title",'Red sauce pasta')
     def test_suitable_for(self):
