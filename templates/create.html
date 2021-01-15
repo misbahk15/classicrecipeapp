@@ -5,18 +5,21 @@
 
 <form method="post">
     <div class="form-group">
+        <!-- Title field-->
         <label for="title">Title</label>
         <input type="text" name="title"
                placeholder="Recipe title" class="form-control"
                value="{{ request.form['title'] }}"></input>
     </div>
     <div class="form-group">
+        <!-- How many people feed field-->
         <label for="suitable_for">Feeds How many people</label>
         <input type="text" name="suitable_for"
                placeholder="Recipe feeds" class="form-control"
                value="{{ request.form['suitable_for'] }}"></input>
     </div>
     <div class="form-group">
+        <!-- Vegeterian field-->
         <label for="isveg">Is vegetarian?</label>
         <input type="text" name="isveg"
                placeholder="Mention Yes or No for is Vegetarian or not" class="form-control"
@@ -24,6 +27,7 @@
     </div>
 
     <div class="form-group">
+        <!-- Ingredients field-->
         <label for="ingredients">Ingredients</label>
         <input type="text" name="ingredients"
                placeholder="List of ingredients" class="form-control"
@@ -31,6 +35,7 @@
     </div>
     
     <div class="form-group">
+        <!--Cooking instructions field-->
         <label for="cookinginstructions">Cooking Instructions</label>
         <textarea name="cookinginstructions" placeholder="Mention cooking instructions here"
                   class="form-control">{{ request.form['cooking_instructions'] }}</textarea>
